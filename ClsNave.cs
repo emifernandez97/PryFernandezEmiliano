@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Windows.Forms;
+using Timer = System.Windows.Forms.Timer;
 
 namespace PryFernandezE
 {
     internal class ClsNave
     {
-
+     
         public void Mover(KeyEventArgs e, PictureBox Nave) 
         {
             PictureBox PctNave = new PictureBox(); //Objeto por lo que voy a trabajar, se instancia en memoria.
@@ -33,22 +36,28 @@ namespace PryFernandezE
             }
         }
 
-        public void Disparar (KeyEventArgs e) 
+        public void Disparar (KeyEventArgs e, PictureBox Nave, FrmGalaga FrmGalaga) //metodo 
         {
             switch (e.KeyCode)
             {
                 case Keys.Space:
-                    Disparo();
+                    Disparo(Nave , FrmGalaga);
                     break;
 
             }
         }
 
-        void Disparo() 
+        void Disparo( PictureBox Nave , FrmGalaga FrmGalaga)  //funcion
         {
             PictureBox PctDisparo = new PictureBox(); //Objeto por lo que voy a trabajar, se instancia en memoria.
-            //PctDisparo.Image = PryFernandezE.Properties.Resources.
+            PctDisparo.Image = PryFernandezE.Properties.Resources.DisparoNave1;
+            PctDisparo.Size = new Size( 70, 70);
+            PctDisparo.Location = new Point( Nave.Location.X , 370 );
+            FrmGalaga.Controls.Add( PctDisparo );
+            PctDisparo.SizeMode = PictureBoxSizeMode.StretchImage;
+            PctDisparo.BringToFront();
 
         }
+
     }
 }

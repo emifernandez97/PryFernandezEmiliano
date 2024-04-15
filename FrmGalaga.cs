@@ -25,6 +25,7 @@ namespace PryFernandezE
         private void FrmGalaga_KeyDown(object sender, KeyEventArgs e)
         {
             ObjNave.Mover(e, PctNave); //ejecutanddo clase con el objeto creado en el evento tecla
+            ObjNave.Disparar(e , PctNave , this);
         }
 
     }

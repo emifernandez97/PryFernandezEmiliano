@@ -73,6 +73,16 @@ namespace PryFernandezE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1213123213213videojuego_nave_espacial_thumbnail_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("1213123213213videojuego-nave-espacial-thumbnail-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DisparoNave1 {
             get {
                 object obj = ResourceManager.GetObject("DisparoNave1", resourceCulture);

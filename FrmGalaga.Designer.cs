@@ -52,8 +52,8 @@
             // PctNave
             // 
             PctNave.BackColor = Color.Transparent;
-            PctNave.Image = Properties.Resources._1213123213213videojuego_nave_espacial_thumbnail;
-            PctNave.Location = new Point(360, 353);
+            PctNave.Image = Properties.Resources._1213123213213videojuego_nave_espacial_thumbnail_removebg_preview;
+            PctNave.Location = new Point(349, 353);
             PctNave.Name = "PctNave";
             PctNave.Size = new Size(107, 87);
             PctNave.SizeMode = PictureBoxSizeMode.StretchImage;
