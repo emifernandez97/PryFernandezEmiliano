@@ -31,10 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGalaga));
             pictureBox1 = new PictureBox();
             PctNave = new PictureBox();
-            PctNaveEnemigaUno = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PctNave).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)PctNaveEnemigaUno).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -60,17 +58,6 @@
             PctNave.TabIndex = 1;
             PctNave.TabStop = false;
             // 
-            // PctNaveEnemigaUno
-            // 
-            PctNaveEnemigaUno.BackColor = Color.Transparent;
-            PctNaveEnemigaUno.Image = (Image)resources.GetObject("PctNaveEnemigaUno.Image");
-            PctNaveEnemigaUno.Location = new Point(328, 12);
-            PctNaveEnemigaUno.Name = "PctNaveEnemigaUno";
-            PctNaveEnemigaUno.Size = new Size(170, 87);
-            PctNaveEnemigaUno.SizeMode = PictureBoxSizeMode.StretchImage;
-            PctNaveEnemigaUno.TabIndex = 2;
-            PctNaveEnemigaUno.TabStop = false;
-            // 
             // FrmGalaga
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -78,15 +65,14 @@
             BackColor = Color.Black;
             ClientSize = new Size(800, 452);
             Controls.Add(PctNave);
-            Controls.Add(PctNaveEnemigaUno);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmGalaga";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Galaga";
             KeyDown += FrmGalaga_KeyDown;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)PctNave).EndInit();
-            ((System.ComponentModel.ISupportInitialize)PctNaveEnemigaUno).EndInit();
             ResumeLayout(false);
         }
 
@@ -94,6 +80,5 @@
 
         private PictureBox pictureBox1;
         private PictureBox PctNave;
-        private PictureBox PctNaveEnemigaUno;
     }
 }

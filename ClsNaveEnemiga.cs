@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,17 +9,33 @@ namespace PryFernandezE
 {
     internal class ClsNaveEnemiga
     {
+        //Propiedades
 
-        /*private void MoverImagenRandom()
+        public PictureBox PctEnemigo;
+
+        //Constructor
+
+        //Metodos
+        public void Mover(FrmGalaga FrmGalaga) 
         {
-            // Generar coordenadas aleatorias dentro del área visible del formulario
-            int maxX = this.ClientSize.Width - PctNaveEnemigaUno.Width;
-            int maxY = this.ClientSize.Height - PctNaveEnemigaUno.Height;
-            int newX = random.Next(0, maxX);
-            int newY = random.Next(0, maxY);
+            PctEnemigo = new PictureBox();
+            Random Rnd = new Random();
 
-            // Mover la imagen a las coordenadas aleatorias
-            PctNaveEnemigaUno.Location = new System.Drawing.Point(newX, newY);
-        }*/
+            Rnd.Next(1 , 3);
+            int Randomx = Rnd.Next(0,FrmGalaga.ClientSize.Width - PctEnemigo.Width);
+            switch (Rnd.Next(1 ,3) ) 
+            {
+                case 1:
+                    PctEnemigo.Image = PryFernandezE.Properties.Resources.NaveEnemigaUno;
+                    break;
+            }
+            PctEnemigo.BackColor = Color.Black;
+            PctEnemigo.Size = new Size(66, 61);
+            PctEnemigo.SizeMode = PictureBoxSizeMode.StretchImage;
+            PctEnemigo.Location = new Point(Randomx,12);
+            FrmGalaga.Controls.Add(PctEnemigo);
+            PctEnemigo.BringToFront();
+        }
+
     }
 }
